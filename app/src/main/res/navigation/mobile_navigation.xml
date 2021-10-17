@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/calendario2"
-        android:name="com.example.calendariourjc.Calendario"
+        android:name="com.example.calendariourjc.CalendarActivity"
         android:label="calendario_fragment"
-        tools:layout="@layout/calendario_fragment" />
+        tools:layout="@layout/activity_calendar" />
 </navigation>
