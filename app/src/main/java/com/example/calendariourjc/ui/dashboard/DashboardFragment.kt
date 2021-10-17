@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.calendariourjc.CalendarActivity
 import com.example.calendariourjc.EventsActivity
 import com.example.calendariourjc.ScheduleActivity
 import com.example.calendariourjc.databinding.FragmentDashboardBinding
@@ -33,6 +32,11 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val calendar_button = binding.calendarButton;
+        calendar_button.setOnClickListener{
+            val intent = Intent(context, CalendarActivity::class.java)
+            startActivity(intent)
+        }
         val textView: TextView = binding.textDashboard
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
@@ -51,8 +55,6 @@ class DashboardFragment : Fragment() {
         }
 
         return root
-
-
     }
 
     override fun onDestroyView() {
