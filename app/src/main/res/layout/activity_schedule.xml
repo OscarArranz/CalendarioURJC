@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red_variant"
+    >
+
+    <WebView
+        android:id="@+id/scheduleWeb"
+        android:layout_width="match_parent"
+        android:layout_height="608dp" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55.2dp"
+        android:layout_marginHorizontal="5dp"
+        android:text="volver" />
+
+</LinearLayout>

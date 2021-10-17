@@ -41,7 +41,7 @@
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/schedule_btn"
         android:layout_width="282dp"
         android:layout_height="56dp"
         android:backgroundTint="@color/red"
