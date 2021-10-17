@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.calendariourjc.CalendarActivity
+import com.example.calendariourjc.EventsActivity
+import com.example.calendariourjc.ScheduleActivity
 import com.example.calendariourjc.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -34,6 +36,22 @@ class DashboardFragment : Fragment() {
         calendar_button.setOnClickListener{
             val intent = Intent(context, CalendarActivity::class.java)
             startActivity(intent)
+        }
+        val textView: TextView = binding.textDashboard
+        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+            textView.text = it
+        })
+
+        val scheduleBtn = binding.scheduleBtn;
+        scheduleBtn.setOnClickListener {
+            val scheduleActivity = Intent(context, ScheduleActivity::class.java)
+            startActivity(scheduleActivity)
+        }
+
+        val goEventsBtn = binding.goEventsBtn;
+        goEventsBtn.setOnClickListener {
+            val eventsActivity = Intent(context, EventsActivity::class.java)
+            startActivity(eventsActivity)
         }
 
         return root

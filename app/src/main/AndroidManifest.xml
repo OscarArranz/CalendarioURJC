@@ -19,9 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarActivity" >
-
-        </activity>
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".AddDateEventActivity" />
+        <activity android:name=".EventsActivity" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
