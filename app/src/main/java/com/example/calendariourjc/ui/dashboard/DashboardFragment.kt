@@ -1,5 +1,6 @@
 package com.example.calendariourjc.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.calendariourjc.ScheduleActivity
 import com.example.calendariourjc.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -34,6 +36,13 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        val scheduleBtn = binding.scheduleBtn;
+        scheduleBtn.setOnClickListener {
+            val scheduleActivity = Intent(context, ScheduleActivity::class.java)
+            startActivity(scheduleActivity)
+        }
+
         return root
 
 
