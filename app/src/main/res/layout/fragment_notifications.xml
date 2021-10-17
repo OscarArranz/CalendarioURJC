@@ -25,8 +25,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="389dp"
-        android:layout_height="128dp"
+        android:layout_width="384dp"
+        android:layout_height="32dp"
         android:text="Estas son tus notificaciones:"
         android:textAlignment="center"
         android:textColor="#FD5F5F"
