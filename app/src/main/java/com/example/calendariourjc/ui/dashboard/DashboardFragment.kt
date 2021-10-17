@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.calendariourjc.EventsActivity
 import com.example.calendariourjc.ScheduleActivity
 import com.example.calendariourjc.databinding.FragmentDashboardBinding
 
@@ -41,6 +42,12 @@ class DashboardFragment : Fragment() {
         scheduleBtn.setOnClickListener {
             val scheduleActivity = Intent(context, ScheduleActivity::class.java)
             startActivity(scheduleActivity)
+        }
+
+        val goEventsBtn = binding.goEventsBtn;
+        goEventsBtn.setOnClickListener {
+            val eventsActivity = Intent(context, EventsActivity::class.java)
+            startActivity(eventsActivity)
         }
 
         return root
