@@ -11,30 +11,15 @@
         android:id="@+id/Button6"
         android:layout_width="282dp"
         android:layout_height="56dp"
-        android:backgroundTint="@color/design_default_color_error"
+        android:backgroundTint="@color/red"
         android:text="Calendario"
-        app:iconTint="@color/design_default_color_error"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158"
-        tools:visibility="visible" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="282dp"
-        android:layout_height="56dp"
-        android:backgroundTint="@color/design_default_color_error"
-        android:text="Añadir Notificación"
-        app:iconTint="@color/design_default_color_error"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459"
+        app:layout_constraintVertical_bias="0.023"
         tools:visibility="visible" />
 
     <TextView
@@ -49,38 +34,40 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371"
         tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="282dp"
-        android:layout_height="56dp"
-        android:backgroundTint="@color/design_default_color_error"
-        android:text="Eventos"
-        app:iconTint="@color/design_default_color_error"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311"
-        tools:visibility="visible" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="282dp"
         android:layout_height="56dp"
-        android:backgroundTint="@color/design_default_color_error"
+        android:backgroundTint="@color/red"
         android:text="Horario URJC"
-        app:iconTint="@color/design_default_color_error"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.477" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="282dp"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/red"
+        android:text="Eventos"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177"
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -89,8 +76,24 @@
         android:src="@drawable/urjc_escudo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
+        app:layout_constraintVertical_bias="0.738" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="282dp"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/red"
+        android:text="Añadir Notificación"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
