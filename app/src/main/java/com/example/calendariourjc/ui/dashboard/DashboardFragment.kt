@@ -37,10 +37,6 @@ class DashboardFragment : Fragment() {
             val intent = Intent(context, CalendarActivity::class.java)
             startActivity(intent)
         }
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
 
         val scheduleBtn = binding.scheduleBtn;
         scheduleBtn.setOnClickListener {
@@ -48,7 +44,7 @@ class DashboardFragment : Fragment() {
             startActivity(scheduleActivity)
         }
 
-        val goEventsBtn = binding.goEventsBtn;
+        val goEventsBtn = binding.eventsPageGo;
         goEventsBtn.setOnClickListener {
             val eventsActivity = Intent(context, EventsActivity::class.java)
             startActivity(eventsActivity)

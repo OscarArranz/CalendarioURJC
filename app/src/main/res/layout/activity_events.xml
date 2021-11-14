@@ -7,18 +7,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:text="Proximos Eventos"
         android:textColor="@color/red"
-        android:textSize="23dp"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        />
+        android:textSize="23dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="580dp"
         android:id="@+id/events_view"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+
+    </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
