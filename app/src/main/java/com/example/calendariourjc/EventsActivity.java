@@ -68,4 +68,5 @@ public class EventsActivity extends AppCompatActivity {
             EventsActivity.this.startActivity(addDate);
         });
     }
+
 }

@@ -1,5 +1,6 @@
 package com.example.calendariourjc.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.calendariourjc.AyudaScroll
+import com.example.calendariourjc.CalendarActivity
 import com.example.calendariourjc.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -34,6 +37,11 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        val helpbutton = binding.helpbutton;
+        helpbutton.setOnClickListener{
+            val intent = Intent(context, AyudaScroll::class.java)
+            startActivity(intent)
+        }
         return root
     }
 
