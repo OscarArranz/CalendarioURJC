@@ -8,8 +8,6 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.calendariourjc.ui.dashboard.DashboardFragment;
-
 public class EventsActivity extends AppCompatActivity {
 
     Button go_add_event_btn;
@@ -25,4 +23,5 @@ public class EventsActivity extends AppCompatActivity {
             EventsActivity.this.startActivity(addDate);
         });
     }
+
 }
