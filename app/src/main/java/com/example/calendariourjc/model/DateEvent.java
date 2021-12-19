@@ -7,7 +7,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DateEvent {
 
@@ -15,6 +17,7 @@ public class DateEvent {
     String title;
     String description;
     int id;
+    ArrayList<String> comments;
 
     public int getId() {
         return id;
@@ -22,6 +25,14 @@ public class DateEvent {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public List<String> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<String> comments) {
+        this.comments = (ArrayList<String>) comments;
     }
 
     public String getDate() {
@@ -101,8 +112,6 @@ public class DateEvent {
             String description = sharedPrefs.getString(i + "-DateEvent-Description", "");
 
             dateEvents.add(new DateEvent(i, date, title, description));
-
-            System.out.print(date);
         }
 
         return dateEvents;
@@ -117,6 +126,36 @@ public class DateEvent {
 
     public void modify(String date, String title, String description) {
 
+    }
+
+    public static void addComment(String comment, int id, SharedPreferences sharedPrefs) {
+        int lastIndex = sharedPrefs.getInt(id + "-lastCommentIndex", 0);
+
+        sharedPrefs.edit()
+                .putInt(id + "-lastCommentIndex", lastIndex + 1)
+                .putString(id + "-DateEvent-Comment-" + lastIndex, comment)
+                .commit();
+    }
+
+    public static void deleteComment(int id, int commentId, SharedPreferences sharedPrefs) {
+        sharedPrefs.edit()
+                .remove(id + "-DateEvent-Comment-" + commentId)
+                .commit();
+    }
+
+    public static Map<Integer, String> getAllComments(int id, SharedPreferences sharedPrefs) {
+        HashMap<Integer, String> comments = new HashMap<>();
+        int lastIndex = sharedPrefs.getInt(id + "-lastCommentIndex", 0);
+
+        for(int i = 0; i < lastIndex; i++) {
+            String comment = sharedPrefs.getString(id + "-DateEvent-Comment-" + i, "");
+
+            if(comment == "") continue;
+
+            comments.put(i, comment);
+        }
+
+        return comments;
     }
 
 }
