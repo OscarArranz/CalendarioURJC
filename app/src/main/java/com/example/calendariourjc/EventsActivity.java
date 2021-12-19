@@ -40,14 +40,31 @@ public class EventsActivity extends AppCompatActivity {
             TextView description = new TextView(this);
 
             Button delete = new Button(this);
+            Button viewBtn = new Button(this);
             delete.setText("Borrar");
+            viewBtn.setText("Ver");
+
+            LinearLayout buttons = new LinearLayout(this);
+            buttons.setOrientation(LinearLayout.HORIZONTAL);
+            buttons.addView(viewBtn);
+            buttons.addView(delete);
 
             delete.setOnClickListener(view -> {
                 dateEvent.delete(sharedPrefs);
                 eventsView.removeView(title);
                 eventsView.removeView(date);
                 eventsView.removeView(description);
-                eventsView.removeView(delete);
+                eventsView.removeView(buttons);
+            });
+
+            viewBtn.setOnClickListener(view -> {
+                Intent eventDetail = new Intent(EventsActivity.this, EventDetailActivity.class);
+                eventDetail
+                        .putExtra("id", dateEvent.getId())
+                        .putExtra("title", dateEvent.getTitle())
+                        .putExtra("date", dateEvent.getDate())
+                        .putExtra("description", dateEvent.getDescription());
+                EventsActivity.this.startActivity(eventDetail);
             });
 
             date.setText("Fecha: " + dateEvent.getDate());
@@ -57,7 +74,7 @@ public class EventsActivity extends AppCompatActivity {
             eventsView.addView(title);
             eventsView.addView(date);
             eventsView.addView(description);
-            eventsView.addView(delete);
+            eventsView.addView(buttons);
 
             LinearLayout separator = new LinearLayout(this);
             eventsView.addView(separator, 10, 60);
